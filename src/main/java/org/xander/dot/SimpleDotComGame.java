@@ -1,6 +1,7 @@
 package org.xander.dot;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Created by IntelliJ IDEA.
@@ -14,10 +15,13 @@ public class SimpleDotComGame {
         
         int numbOfGuesses = 0;
         GameHelper helper = new GameHelper();
-        SimpleDotCom sdc = new SimpleDotCom();
-        int randomNumber = (int)(Math.random() * 5);
-        int[] locations = {randomNumber, randomNumber + 1, randomNumber + 2};
-        
+        DotCom sdc = new DotCom();
+
+        ArrayList<String> locations = new ArrayList<String>();
+        locations.add("1");
+        locations.add("2");
+        locations.add("3");
+
         sdc.setLocationCells(locations);
         
         boolean isAlive = true;
